@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useFetchData } from "../../Hooks/useAPI";
 import Display from '../Display/Display'
 import Button from "../ui/Button/Button";
+import Input from "../ui/Input/Input";
 
 
 const Form = () => {
@@ -33,7 +34,7 @@ const Form = () => {
   return (
     <div>
        {validationError && <h3>Please enter a valid input</h3>}
-        <input
+        <Input
           type="text"
           value={pokemonName}
           onChange={handleOnChange}
