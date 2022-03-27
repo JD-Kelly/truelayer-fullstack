@@ -1,21 +1,23 @@
 import React from 'react'
 import LoadingHandler from "../ui/LoadingHandler/LoadingHandler"
 import ErrorHandler  from "../ui/ErrorHandler/ErrorHandler"
+import { DisplayContainer, PokemonName, PokemonDescription, PokemonImage } from './Display.styles'
 
 const Display = ({ isError ,data, isLoading}) => {
   return (
-    <div>
+    <DisplayContainer>
     {isError && <ErrorHandler errorMessage='server error'/>}
-    {isLoading ? <LoadingHandler /> :
+    {isLoading ? <LoadingHandler data-test={"loading-handle"}/> :
       <>
-        <h3>{data.name}</h3>
-        <h3>{data.description}</h3>
-        <img
+        <PokemonName data-test={'pokemon-name'}>{data.name}</PokemonName>
+        <PokemonDescription data-test={'pokemon-description'}>{data.description}</PokemonDescription>
+        <PokemonImage
+          data-test={'pokemon-image'}
           src={data.image}
           alt="" />
       </>
     } 
-      </div>
+      </DisplayContainer>
     
     )
   }
