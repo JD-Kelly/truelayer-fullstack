@@ -1,12 +1,12 @@
 import React from 'react'
 import LoadingHandler from "../ui/LoadingHandler/LoadingHandler"
-import { ErrorHandler } from "../ui/ErrorHandler/ErrorHandler"
+import ErrorHandler  from "../ui/ErrorHandler/ErrorHandler"
 
 const Display = ({ isError ,data, isLoading}) => {
   return (
     <div>
-    {isError ? <ErrorHandler /> :
-    isLoading ? <LoadingHandler /> :
+    {isError && <ErrorHandler errorMessage='server error'/>}
+    {isLoading ? <LoadingHandler /> :
       <>
         <h3>{data.name}</h3>
         <h3>{data.description}</h3>
@@ -14,8 +14,9 @@ const Display = ({ isError ,data, isLoading}) => {
           src={data.image}
           alt="" />
       </>
-    }
+    } 
       </div>
+    
     )
   }
 

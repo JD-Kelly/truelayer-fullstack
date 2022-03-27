@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const ErrorHandler = () => {
+const ErrorHandler = ({errorMessage}) => {
   return (
     <>
-      <p data-test={'error-message'}>Server Error</p>
+      <p data-test='error-message'>{errorMessage}</p>
       <button
         data-test={'retry-button'}
         inactive={'false'} 
