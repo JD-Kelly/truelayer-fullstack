@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useFetchData } from "../../Hooks/useAPI";
+import Display from '../Display/Display'
 
 
 const Form = () => {
@@ -7,7 +8,7 @@ const Form = () => {
   const [pokemonName, setPokemonName] = useState("");
   const [validationError, setValidationError] = useState(false);
 
-  const {fetchData, data } = useFetchData(pokemonName)
+  const {fetchData, data, isLoading, isError } = useFetchData(pokemonName)
 
 
   const handleOnChange = (e) => {
@@ -43,7 +44,9 @@ const Form = () => {
         >
           Submit
         </button>
+        <Display data={data} isLoading={isLoading} isError={isError}/>
     </div>
+    
   )
 }
 
