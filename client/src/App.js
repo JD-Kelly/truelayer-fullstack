@@ -1,10 +1,11 @@
 import './App.css';
+import HomeContainer from "./Components/HomeContainer/HomeContainer";
 
 function App() {
   return (
-      <header className="App-header">
-        Pokemon Search Engine
-      </header>
+  <div>
+     <HomeContainer />
+  </div>
   );
 }
 
