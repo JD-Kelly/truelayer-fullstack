@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useFetchData } from "../../Hooks/useAPI";
 import Display from '../Display/Display'
+import Button from "../ui/Button/Button";
 
 
 const Form = () => {
@@ -38,12 +39,12 @@ const Form = () => {
           onChange={handleOnChange}
           placeholder="Enter Pokemon name..."
         />
-        <button
+        <Button
           type="submit"
           onClick={handleOnClick}
         >
           Submit
-        </button>
+        </Button>
         <Display data={data} isLoading={isLoading} isError={isError}/>
     </div>
     
