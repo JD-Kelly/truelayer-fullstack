@@ -7,7 +7,7 @@ describe('ErrorHandler', () => {
 
   const setup = () => render(<ErrorHandler />);
 
-  it('renders header and subheader', () => {
+  it('renders error message and retry button', () => {
     setup()
     const errorMessage = screen.getByTestId('error-message')
     const retryButton = screen.getByTestId('retry-button')
