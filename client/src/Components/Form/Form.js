@@ -3,6 +3,7 @@ import { useFetchData } from "../../Hooks/useAPI";
 import Display from '../Display/Display'
 import Button from "../ui/Button/Button";
 import Input from "../ui/Input/Input";
+import { InputContainer, ButtonContainer} from "./Form.styles";
 
 
 const Form = () => {
@@ -34,19 +35,23 @@ const Form = () => {
   return (
     <div>
        {validationError && <h3>Please enter a valid input</h3>}
+       <InputContainer>
         <Input
           type="text"
           value={pokemonName}
           onChange={handleOnChange}
           placeholder="Enter Pokemon name..."
         />
+        </InputContainer>
+        <ButtonContainer>
         <Button
           type="submit"
           onClick={handleOnClick}
         >
           Submit
         </Button>
-        <Display data={data} isLoading={isLoading} isError={isError}/>
+        </ButtonContainer>
+        <Display data={data} isLoading={isLoading} isError={isError} />
     </div>
     
   )
