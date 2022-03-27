@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoadingHandler = () => {
   return (
-    <div>Loading...</div>
+    <div data-test={'loading-message'}>Loading...</div>
   )
 }
 
