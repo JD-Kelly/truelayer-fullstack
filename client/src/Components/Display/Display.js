@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Display = ({ data, isLoading }) => {
+const Display = ({ isError ,data, isLoading}) => {
   return (
+    isError ? <p>There was an error</p> :
     isLoading ? <p>is Loading...</p> :
       <>
         <h3>{data.name}</h3>
@@ -10,7 +11,7 @@ const Display = ({ data, isLoading }) => {
           src={data.image}
           alt="" />
       </>
-  )
-}
+    )
+  }
 
 export default Display
