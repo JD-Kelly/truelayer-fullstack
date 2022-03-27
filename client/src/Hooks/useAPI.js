@@ -4,6 +4,7 @@ import axios from 'axios';
 export const useFetchData = (pokemonName) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false)
 
   const fetchData = () => {
     setIsLoading(true)
@@ -15,6 +16,7 @@ export const useFetchData = (pokemonName) => {
         console.log(data)
       })
       .catch((error) => {
+        setIsError(true)
         setIsLoading(false)
         console.log(error)
       })
@@ -22,6 +24,7 @@ export const useFetchData = (pokemonName) => {
   return {
     fetchData,
     data,
-    isLoading
+    isLoading,
+    isError
   };
 }
