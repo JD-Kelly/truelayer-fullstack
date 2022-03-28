@@ -4,6 +4,7 @@ import Display from '../Display/Display'
 import Button from "../ui/Button/Button";
 import Input from "../ui/Input/Input";
 import { InputContainer, ButtonContainer} from "./Form.styles";
+import { ValidationWarning } from "../../styles/global";
 
 
 const Form = () => {
@@ -34,7 +35,7 @@ const Form = () => {
 
   return (
     <div>
-       {validationError && <h3>Please enter a valid input</h3>}
+       {validationError && <ValidationWarning>Please enter a valid input</ValidationWarning>}
        <InputContainer>
         <Input
           type="text"
