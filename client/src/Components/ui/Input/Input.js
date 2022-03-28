@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledInput } from "./Input.styles";
 
-const Input = ({ type, placeholder, value, onChange, }) => (
+const Input = ({ type, placeholder, value, onChange}) => (
   <>
     <StyledInput
       data-test={'input-field'}
