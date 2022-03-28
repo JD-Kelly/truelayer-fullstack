@@ -1,8 +1,9 @@
 import React from "react";
+import { StyledInput } from "./Input.styles";
 
 const Input = ({ type, placeholder, value, onChange, }) => (
   <>
-    <input
+    <StyledInput
       data-test={'input-field'}
       type={type}
       value={value}
