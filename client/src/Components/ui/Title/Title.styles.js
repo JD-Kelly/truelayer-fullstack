@@ -4,6 +4,7 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 70px
 `
 
 export const Header = styled.div`
@@ -23,4 +24,4 @@ export const SubHeader = styled.div`
     font-size: 15px;
     text-align: center;
   }
-  `
+`  
