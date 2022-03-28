@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { Header, SubHeader, TitleContainer } from './Title.styles'
 
 const Title = ({ header, subheader }) => (
-  <div>
-    <h1 data-test='header-text'>{header}</h1>
-    <h2 data-test='subheader-text'>{subheader}</h2>
-  </div>
+  <TitleContainer>
+    <Header data-test='header-text'>{header}</Header>
+    <SubHeader data-test='subheader-text'>{subheader}</SubHeader>
+  </TitleContainer>
 )
 
 export default Title
