@@ -5,4 +5,9 @@ export const StyledInput = styled.input`
   width: 50%;
   font-size: 20px;
   text-align: center;
+  outline: none;
+  &:focus {
+    border-color: blue;
+  }
+
 `;
