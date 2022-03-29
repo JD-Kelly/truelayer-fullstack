@@ -4,10 +4,10 @@ export const StyledButton = styled.button`
   background: #196cff;
   color: #ffff;
   width: 150px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   border-radius: 3px;
-  padding: 16px 50px;
+  padding: 18px 50px;
   border: none;
   cursor: pointer;
   &:hover {
