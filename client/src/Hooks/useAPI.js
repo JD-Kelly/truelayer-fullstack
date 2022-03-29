@@ -6,9 +6,9 @@ export const useFetchData = (pokemonName) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false)
 
-  const fetchData = () => {
-    setIsLoading(true)
-    axios
+    const fetchData = () => {
+      setIsLoading(true)
+      axios
       .get(`http://localhost:9000/pokemon/${pokemonName}`)
       .then((response) => {
         setData(response.data)
@@ -28,3 +28,6 @@ export const useFetchData = (pokemonName) => {
     isError
   };
 }
+
+
+
