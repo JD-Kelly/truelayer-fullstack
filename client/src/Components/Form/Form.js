@@ -19,7 +19,7 @@ const Form = () => {
     const pokemonName = e.target.value
     const regex = /^(?![\s.]+$)[a-zA-Z\s.']*$/
     if (pokemonName.match(regex)) {
-      setPokemonName(pokemonName)
+      setPokemonName(pokemonName.toLowerCase())
       setValidationError(false)
     } else {
       setValidationError(true)
