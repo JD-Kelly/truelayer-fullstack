@@ -2,13 +2,11 @@ import './App.css';
 import HomeContainer from "./Components/HomeContainer/HomeContainer";
 import { GlobalStyle } from './styles/global';
 
-function App() {
-  return (
-  <div>
+const App = () => (
+  <>
      <GlobalStyle />
      <HomeContainer />
-  </div>
-  );
-}
+  </>
+);
 
 export default App;
