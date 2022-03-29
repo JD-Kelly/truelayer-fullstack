@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const DisplayContainer = styled.div`
   display: grid;
   justify-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px
 `;
 
 export const PokemonName = styled.div`
@@ -26,9 +28,13 @@ export const PokemonDescription = styled.div`
 `
 
 export const PokemonImage = styled.img`
+  border: none;
   margin-top: 30px;
   margin-bottom: 10px;
-  height: 100px;
+  height: 200px;
+  width: 200px;
   @media screen and (max-width: 800px) {
+    height: 100px;
+    width: 100px
   }
 `
