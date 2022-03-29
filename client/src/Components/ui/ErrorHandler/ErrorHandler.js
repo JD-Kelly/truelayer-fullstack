@@ -1,15 +1,16 @@
 import React from 'react'
+import { StyledErrorHandler, StyledRetryButton } from "./ErrorHandler.styles";
 
 const ErrorHandler = ({errorMessage}) => {
   return (
     <>
-      <p data-test='error-message'>{errorMessage}</p>
-      <button
+      <StyledErrorHandler data-test='error-message'>{errorMessage} </StyledErrorHandler>
+      <StyledRetryButton
         data-test={'retry-button'}
         inactive={'false'} 
         onClick={() => window.location.reload()}
       >
-        Retry</button>
+        Retry</StyledRetryButton>
     </>
   )
 }
