@@ -1,9 +1,11 @@
 import React from 'react'
+import { StyledLoadingHandler } from "./LoadingHandler.styles";
 
-const LoadingHandler = () => {
-  return (
-    <div data-test={'loading-message'}>Loading...</div>
+const LoadingHandler = ({loadingMessage}) => (
+  <>
+    <StyledLoadingHandler> data-test={'loading-message'}{loadingMessage}</StyledLoadingHandler>
+  </>
   )
-}
+
 
 export default LoadingHandler
