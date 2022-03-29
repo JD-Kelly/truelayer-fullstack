@@ -16,10 +16,10 @@ const Form = () => {
 
 
   const handleOnChange = (e) => {
-    const pokemonName = e.target.value
+    const pokemonName = e.target.value.toLowerCase()
     const regex = /^(?![\s.]+$)[a-zA-Z\s.']*$/
     if (pokemonName.match(regex)) {
-      setPokemonName(pokemonName.toLowerCase())
+      setPokemonName(pokemonName)
       setValidationError(false)
     } else {
       setValidationError(true)
@@ -34,10 +34,11 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <>
        {validationError && <ValidationWarning>Please enter a valid input</ValidationWarning>}
        <InputContainer>
         <Input
+          data-test-target="component-name:input"
           type="text"
           value={pokemonName}
           onChange={handleOnChange}
@@ -46,15 +47,17 @@ const Form = () => {
         </InputContainer>
         <ButtonContainer>
         <Button
+          data-test-target="component-name:button"
           type="submit"
           onClick={handleOnClick}
+          isDisabled={!pokemonName}
         >
           Submit
         </Button>
         </ButtonContainer>
         <Display data={data} isLoading={isLoading} isError={isError} />
-    </div>
-    
+    </>
+ 
   )
 }
 
