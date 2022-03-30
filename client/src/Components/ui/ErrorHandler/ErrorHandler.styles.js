@@ -12,4 +12,8 @@ export const ErrorMessage = styled.div`
 `
 export const RetryButton = styled(GlobalStyledButton)`
   background: #646363;
+  &:hover {
+    background: #3f3f3f;
+    transition: 0.5s;
+    }
 `
