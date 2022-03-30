@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  truelayerfrontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+    command: npm run start
+
+  truelayerbackend:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 9000:9000
+    command: node server.js
