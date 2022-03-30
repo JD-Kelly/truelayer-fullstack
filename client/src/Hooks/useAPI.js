@@ -13,12 +13,10 @@ export const useFetchData = (pokemonName) => {
       .then((response) => {
         setData(response.data)
         setIsLoading(false)
-        console.log(data)
       })
       .catch((error) => {
         setIsError(true)
         setIsLoading(false)
-        console.log(error)
       })
   };
   return {
