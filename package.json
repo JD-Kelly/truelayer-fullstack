@@ -1,0 +1,13 @@
+{
+  "name": "truelayer-fullstack",
+  "version": "1.0.0",
+  "scripts": {
+    "test:cypress": "start-server-and-test start http://localhost:3000 cypress",
+    "cypress": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^9.5.3",
+    "eslint-plugin-cypress": "^2.12.1",
+    "start-server-and-test": "^1.14.0"
+  }
+}
