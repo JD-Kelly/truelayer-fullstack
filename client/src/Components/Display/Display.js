@@ -1,25 +1,21 @@
-import React from 'react'
+import React from "react"
 import LoadingHandler from "../ui/LoadingHandler/LoadingHandler"
 import ErrorHandler  from "../ui/ErrorHandler/ErrorHandler"
-import { DisplayContainer, PokemonName, PokemonDescription, PokemonImage } from './Display.styles'
+import { DisplayContainer, PokemonName, PokemonDescription, PokemonImage } from "./Display.styles"
 
-const Display = ({ isError, data, isLoading}) => {
-  return (
+const Display = ({ isError, data, isLoading}) => (
     <DisplayContainer>
-    {isError && <ErrorHandler errorMessage='server error'/>}
-    {isLoading ? <LoadingHandler data-test={"loading-handle"}/> :
+    {isError && <ErrorHandler errorMessage="There was a server error, please click retry and enter a name:"/>}
+    {isLoading ? <LoadingHandler loadingMessage ="Loading..."/> :
       <>
-        <PokemonName data-test={'pokemon-name'}>{data.name}</PokemonName>
-        <PokemonDescription data-test={'pokemon-description'}>{data.description}</PokemonDescription>
+        <PokemonName>{data.name}</PokemonName>
+        <PokemonDescription>{data.description}</PokemonDescription>
         <PokemonImage
-          data-test={'pokemon-image'}
           src={data.image}
           alt="" />
       </>
     } 
-      </DisplayContainer>
-    
+    </DisplayContainer>
     )
-  }
 
 export default Display
