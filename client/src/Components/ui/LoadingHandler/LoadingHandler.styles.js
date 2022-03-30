@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const StyledLoadingHandler = styled.div`
   font-size: 20px;
   margin-top: 30px;
@@ -9,4 +8,4 @@ export const StyledLoadingHandler = styled.div`
   font-size: 15px;
   text-align: center;
 }
-`
+`;

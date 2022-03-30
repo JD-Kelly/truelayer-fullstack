@@ -5,7 +5,7 @@ import MockAdapter from "axios-mock-adapter";
 import {useFetchData} from "../useAPI";
 
 test("useFetchData performs GET request", async () => {
-  const pokemonName = 'charizard';
+  const pokemonName = "charizard";
   const mock = new MockAdapter(axios);
 
   const mockData = {name: "Charizard", description: "This is Charizard"};
@@ -24,8 +24,8 @@ test("useFetchData performs GET request", async () => {
   expect(result.current.isLoading).toBe(true)
 
   await waitForNextUpdate()
-  expect(result.current.data.name).toBe('Charizard')
-  expect(result.current.data.description).toBe('This is Charizard')
+  expect(result.current.data.name).toBe("Charizard")
+  expect(result.current.data.description).toBe("This is Charizard")
   expect(result.current.isLoading).toBe(false)
 });
 

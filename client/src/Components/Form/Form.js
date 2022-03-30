@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, {useState} from "react"
 import { useFetchData } from "../../Hooks/useAPI";
-import Display from '../Display/Display'
+import Display from "../Display/Display"
 import Button from "../ui/Button/Button";
 import Input from "../ui/Input/Input";
 import { InputContainer, ButtonContainer} from "./Form.styles";
@@ -60,7 +60,6 @@ const Form = () => {
  
   )
 }
-
 
 export default Form;
 

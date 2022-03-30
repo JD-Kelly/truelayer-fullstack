@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   
@@ -11,7 +11,7 @@ body {
     font-family: "Inter", sans-serif;
     color: #000000
   }
-`
+`;
 export const ValidationWarning = styled.div`
   text-align: center;
   color: red;

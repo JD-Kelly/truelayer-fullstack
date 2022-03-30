@@ -9,5 +9,4 @@ export const StyledInput = styled.input`
   &:focus {
     border-color: blue;
   }
-
 `;

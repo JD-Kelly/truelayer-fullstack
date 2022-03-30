@@ -4,7 +4,7 @@ import { StyledInput } from "./Input.styles";
 const Input = ({ type, placeholder, value, onChange}) => (
   <>
     <StyledInput
-      data-test={'input-field'}
+      data-test={"input-field"}
       type={type}
       value={value}
       onChange={onChange}
