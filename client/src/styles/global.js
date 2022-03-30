@@ -15,6 +15,7 @@ body {
 export const ValidationWarning = styled.div`
   text-align: center;
   color: red;
+  margin-bottom: 5px;
 `;
 
 export const GlobalStyledButton = styled.button`
