@@ -1,1 +1,9 @@
 node_modules/
+
+# cypress
+cypress/plugins
+cypress/support
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
