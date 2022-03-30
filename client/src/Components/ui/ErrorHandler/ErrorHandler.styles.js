@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { GlobalStyledButton } from "../../../styles/global";
 
-
-export const StyledErrorHandler = styled.div`
+export const ErrorMessage = styled.div`
   font-size: 20px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -11,6 +10,6 @@ export const StyledErrorHandler = styled.div`
   text-align: center;
 }
 `
-export const StyledRetryButton = styled(GlobalStyledButton)`
-  color: red;
+export const RetryButton = styled(GlobalStyledButton)`
+  background: #646363;
 `
