@@ -30,7 +30,6 @@ const Form = () => {
     setValidationError(false)
     fetchData()
     setPokemonName('')
-    console.log(pokemonName)
   };
 
   return (
