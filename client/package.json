@@ -17,9 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "test:cypress": "start-server-and-test start http://localhost:3000 cypress",
-    "cypress": "cypress run"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -41,9 +39,6 @@
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^7.0.2",
-    "axios-mock-adapter": "^1.20.0",
-    "cypress": "^9.5.3",
-    "eslint-plugin-cypress": "^2.12.1",
-    "start-server-and-test": "^1.14.0"
+    "axios-mock-adapter": "^1.20.0"
   }
 }
